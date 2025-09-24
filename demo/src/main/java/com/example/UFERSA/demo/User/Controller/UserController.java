@@ -26,7 +26,7 @@ public class UserController {
     }
     @PostMapping
     public ResponseEntity<User> createMessage(@RequestBody User newUser) {
-        User createdMessage = new User(99L, "POST: " + newUser.nome(),newUser.senha());
+        User createdMessage = new User(99L,newUser.nome(),newUser.senha());
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(createdMessage);
